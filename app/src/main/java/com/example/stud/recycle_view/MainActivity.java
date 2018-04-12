@@ -24,19 +24,19 @@ public class MainActivity extends AppCompatActivity {
         Planeta uran = new Planeta( "Uran" , "gazowo-lodowa" , 27 );
         Planeta neptun = new Planeta( "Neptun" , "gazowo-lodowa" , 14 );
 
-        List<Planeta> planety = new ArrayList<>( 8 );
-        planety.add(merkury);
-        planety.add(wenus);
-        planety.add(ziemia);
-        planety.add(mars);
-        planety.add(jowisz);
-        planety.add(saturn);
-        planety.add(uran);
-        planety.add(neptun);
+        List<Planeta> list = new ArrayList<>( 8 );
+        list.add(merkury);
+        list.add(wenus);
+        list.add(ziemia);
+        list.add(mars);
+        list.add(jowisz);
+        list.add(saturn);
+        list.add(uran);
+        list.add(neptun);
 
         RecyclerView rvLista = findViewById(R.id.rvLista);
 
-        ListAdapter ListAdapter = new ListAdapter();
+        ListAdapter ListAdapter = new ListAdapter(list);
         rvLista.setAdapter(ListAdapter);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
